@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Membership Registration</title>
+
+    <style>
+        body{
+            background-color: #f0f8ff;
+        }
+
+        .container{
+            width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+	    border: 2px solid navy;
+        }
+
+        h1{
+            color: darkblue;
+        }
+
+        input{
+            width: 80%;
+            padding: 10px;
+        }
+
+        button{
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: darkblue;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Library Membership</h1>
+
+        <p>Enter your name to register as a library member.</p>
+
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <br>
+
+        <button id="registerBtn">
+            Register
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+
+        document.getElementById("registerBtn").addEventListener(
+            "click",
+            function()
+            {
+                let username =
+                document.getElementById("name").value;
+
+                if(username == "")
+                {
+                    document.getElementById("message").innerHTML =
+                    "Please enter your name.";
+
+                    document.getElementById("message").style.color =
+                    "red";
+                }
+                else
+                {
+                    document.getElementById("message").innerHTML =
+                    "Registration Successful! Welcome, " + username;
+
+                    document.getElementById("message").style.color =
+                    "green";
+                }
+            }
+        );
+
+    </script>
+
+</body>
+</html>
