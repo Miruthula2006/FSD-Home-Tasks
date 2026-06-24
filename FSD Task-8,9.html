@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Flowers Garden</title>
+</head>
+
+<body style="background-color:lavenderblush;">
+
+    <h1 id="title" style="text-align:center;">
+        Welcome to the Flower Garden
+    </h1>
+
+    <p>
+        Flowers add beauty, fragrance, and color to our lives.
+        Explore some of the most beautiful flowers in the world.
+    </p>
+
+    <button onclick="showAlert()">
+        Show Flower Message
+    </button>
+
+    <button onclick="changeText()">
+        Change Heading
+    </button>
+
+    <script>
+        function showAlert()
+        {
+            alert("Flowers make the world a more beautiful place!");
+        }
+
+        function changeText()
+        {
+            document.getElementById("title").innerHTML =
+            "Roses, Lilies, and Sunflowers are Amazing!";
+        }
+    </script>
+
+</body>
+</html>
